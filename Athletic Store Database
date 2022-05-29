@@ -1,0 +1,36 @@
+--Create a athletic store database
+
+CREATE TABLE sports_store (id INTEGER primary key, item TEXT, price INTEGER, aisle INTEGER, quantity INTEGER);
+
+insert into store values (1, "weight bench", 255, 3, 5);
+insert into store values (2, "barbell", 100, 3, 15);
+insert into store values (3, "dumbell", 30, 3, 30);
+insert into store values (4, "kettlebell", 50, 3, 25);
+insert into store values (5, "boxing gloves", 40, 2, 10);
+insert into store values (6, "weight lifting shoes", 60, 5, 9);
+insert into store values (7, "water bottle", 15, 1, 43);
+insert into store values (8, "squat rack", 500, 3, 3);
+insert into store values (9, "exercise mat", 35, 1, 26);
+insert into store values (10, "exercise bike", 375, 4, 5);
+insert into store values (11, "treadmill", 2100, 4, 3);
+insert into store values (12, "jump rope", 18, 2, 45);
+insert into store values (13, "protein powder", 35, 1, 74);
+insert into store values (14, "weight set", 300, 3, 3);
+insert into store values (15, "track suit", 65, 5, 27);
+insert into store values (16, "speed bag", 85, 2, 8);
+insert into store values (17, "heavy bag", 180, 2, 4);
+insert into store values (18, "members only jacket", 45, 5, 1);
+insert into store values (19, "plyometric box", 40, 2, 5);
+insert into store values (20, "football", 34, 6, 15);
+insert into store values (21, "baseball bat", 125, 6, 13);
+insert into store values (22, "baseball", 8, 6, 125);
+insert into store values (23, "tenis racket", 45, 6, 16);
+insert into store values (24, "tennis balls", 16, 6, 106);
+
+--display the database ordered by aisle number
+select * from store
+order by aisle;
+
+--show items priced over 300 dollars
+select * from store
+where price > 300 order by price;
